@@ -13,7 +13,7 @@ def compare(url, selector):
     if not os.path.isfile("html.txt"):
         with open("html.txt", "w") as f:
             f.write(get_website(url, selector))
-            return True
+            return False
         
     with open("html.txt", "r+", encoding="utf-8") as f:
         old_html = f.read()
