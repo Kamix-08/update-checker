@@ -11,7 +11,8 @@ Configure the `data.json` file, with the URL of the website you want to monitor 
 ```json
 {
     "url": "WEBSITE_URL",
-    "selector": "CSS_SELECTOR"
+    "selector": "CSS_SELECTOR",
+    "webhook_url": "WEBHOOK_URL"
 }
 ```
 
@@ -20,7 +21,8 @@ _Example:_
 ```json
 {
     "url": "https://en.wikipedia.org/wiki/Kangaroo",
-    "selector": "main"
+    "selector": "main",
+    "webhook_url": "WEBHOOK_URL"
 }
 ```
 
@@ -41,11 +43,7 @@ This will monitor the `main` tag of the [Wikipedia page about kangaroos](https:/
 
 Create a [Discord webhook](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks) on your Discord server, and copy the link.
 
-Paste it in the `main.py` file:
-
-```py
-webhook_url = "YOUR_WEBHOOK_URL"
-```
+Paste it in the `data.json` file.
 
 Now, the program is configured and will send the following message to the channel of your choice, every time the website is updated:
 

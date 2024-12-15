@@ -5,17 +5,15 @@ import aiohttp
 
 from data import *
 
-webhook_url = "YOUR_WEBHOOK_URL"
-
 async def execute():
-    (url, selector) = load_data()
+    (url, selector, webhook_url) = load_data()
     
     if compare(url, selector):
         return
     
-    await send()
+    await send(webhook_url)
 
-async def send():
+async def send(webhook_url):
     async with aiohttp.ClientSession() as session:
         webhook = Webhook.from_url(webhook_url, session=session)
         embed = discord.Embed(title="Update detected!")

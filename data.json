@@ -1,4 +1,5 @@
 {
     "url": "WEBSITE_URL",
-    "selector": "CSS_SELECTOR"
+    "selector": "CSS_SELECTOR",
+    "webhook_url": "WEBHOOK_URL"
 }
